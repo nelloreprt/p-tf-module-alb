@@ -39,7 +39,7 @@ ingress {
     merge (var.tags, Name = "${var.name}-${var.env}-lb-security-group")
 }
 
-# listner with Fixed Response
+# listner with Fixed Response (this is Listener, listener is different vs Listener_rule is different)
 # So if any one hitting from internetwith DNS record of (Public_LB or PRIVATE_LB)
 # (as the rule is NOT matching) it will throw error
 resource "aws_lb_listener" "main" {
